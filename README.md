@@ -1,3 +1,6 @@
+#Description
+This is a Calculator website that calculates equations by creating and using Arithmetic Trees that I created using the React library
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
