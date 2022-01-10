@@ -1,0 +1,43 @@
+header{
+  padding-bottom: 50px;
+  background-color: #3b4d61;
+  top:0;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+#logo{
+  display:flex;
+}
+	img{
+  display:block;
+  image-rendering: -webkit-optimize-contrast;
+  z-index:200;
+  max-width:100px;
+  max-height:100px;
+  margin:15px;
+}
+
+#title{
+ color:white;
+ margin: auto;
+ align-text:left;
+}
+
+#root{
+  height:100%;
+}
+
+#EverythingButTheNav{
+  height:100%;
+}
