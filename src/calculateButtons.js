@@ -34,10 +34,10 @@ function calculateEquation(current){
   treeArr.forEach(function(entry) {
     console.log(entry);
   });
-  let ans=calculateTree(treeArr);
-  return{
-    current: ans,
-  }
+  treeArr=calculateTree(treeArr,0);
+  console.log("you made it back", treeArr[0]);
+  const num=parseInt(treeArr[0]);
+  return num;
 }
 
 function createTree(Arr,arrIndex){
@@ -66,13 +66,25 @@ function createTree(Arr,arrIndex){
     console.log("internal node: ",Arr[arrIndex].charAt(valueIndex));
     console.log("valueIndex: ",valueIndex);
     console.log("equation: ", Arr[arrIndex]);
-    let leftNodeVal;
-    if(valueIndex==1){
-      leftNodeVal=Arr[arrIndex].charAt(0);
-    }else{
-      leftNodeVal=Arr[arrIndex].substring(0,valueIndex-1);
+    let leftNodeVal="null", rightNodeVal="null",i=0;
+    while(i<valueIndex){
+      if(leftNodeVal==="null"){
+        leftNodeVal=Arr[arrIndex].charAt(i);
+      }else{
+        leftNodeVal+=Arr[arrIndex].charAt(i);
+      }
+      i++
     }
-    let rightNodeVal=Arr[arrIndex].substring(valueIndex+1);
+
+    i=valueIndex+1;
+    while(i<Arr[arrIndex].length){
+      if(rightNodeVal==="null"){
+        rightNodeVal=Arr[arrIndex].charAt(i);
+      }else{
+        rightNodeVal+=Arr[arrIndex].charAt(i);
+      }
+      i++
+    }
     Arr[arrIndex]=Arr[arrIndex].charAt(valueIndex);
     console.log("left node:", leftNodeVal);
     console.log("right node:", rightNodeVal);
@@ -87,7 +99,37 @@ function createTree(Arr,arrIndex){
   return Arr;
 }
 
-function calculateTree(root){
-  return "we're not done yet :(";
+function calculateTree(treeArr,index){
+  if(isOperator(treeArr[2*index+1])===true){
+    treeArr=calculateTree(treeArr,2*index+1);
+  }
+
+  if(isOperator(treeArr[2*index+2])===true){
+    treeArr=calculateTree(treeArr,2*index+1);
+  }
+
+  const num1=parseInt(treeArr[2*index+1]);
+  const num2=parseInt(treeArr[2*index+2]);
+
+  if(treeArr[index]==="*"){
+    treeArr[index]=num1*num2;
+  }else if(treeArr[index]==="/"){
+    treeArr[index]=num1/num2;
+  }else if(treeArr[index]==="+"){
+    console.log("right spot");
+    treeArr[index]=num1+num2;
+    console.log("ans: ",treeArr[index]);
+  }else if(treeArr[index]==="-"){
+    treeArr[index]=num1-num2;
+  }
+  return treeArr;
+}
+
+function isOperator(temp){
+  if(temp==="+" || temp==="-" || temp==="*" || temp==="/"){
+    return true;
+  }else {
+    return false;
+  }
 }
 export default calculateButtons;
