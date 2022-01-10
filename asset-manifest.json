@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Tate-page/calculator-app.git/static/css/main.e4064603.chunk.css",
+    "main.js": "/Tate-page/calculator-app.git/static/js/main.9b105a36.chunk.js",
+    "main.js.map": "/Tate-page/calculator-app.git/static/js/main.9b105a36.chunk.js.map",
+    "runtime-main.js": "/Tate-page/calculator-app.git/static/js/runtime-main.2dbbc916.js",
+    "runtime-main.js.map": "/Tate-page/calculator-app.git/static/js/runtime-main.2dbbc916.js.map",
+    "static/js/2.8cb32258.chunk.js": "/Tate-page/calculator-app.git/static/js/2.8cb32258.chunk.js",
+    "static/js/2.8cb32258.chunk.js.map": "/Tate-page/calculator-app.git/static/js/2.8cb32258.chunk.js.map",
+    "static/js/3.49cb6658.chunk.js": "/Tate-page/calculator-app.git/static/js/3.49cb6658.chunk.js",
+    "static/js/3.49cb6658.chunk.js.map": "/Tate-page/calculator-app.git/static/js/3.49cb6658.chunk.js.map",
+    "index.html": "/Tate-page/calculator-app.git/index.html",
+    "static/css/main.e4064603.chunk.css.map": "/Tate-page/calculator-app.git/static/css/main.e4064603.chunk.css.map",
+    "static/js/2.8cb32258.chunk.js.LICENSE.txt": "/Tate-page/calculator-app.git/static/js/2.8cb32258.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/Tate-page/calculator-app.git/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2dbbc916.js",
+    "static/js/2.8cb32258.chunk.js",
+    "static/css/main.e4064603.chunk.css",
+    "static/js/main.9b105a36.chunk.js"
+  ]
+}
