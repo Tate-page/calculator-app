@@ -1,6 +1,10 @@
 .Display{
-  height:10%;
-  background-color: gray;
-  padding: 0;
+  height:5%;
+  background-color: #3b4d61;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-clip: content-box;
   margin: 0;
+
 }
