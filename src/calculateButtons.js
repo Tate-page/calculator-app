@@ -36,7 +36,7 @@ function calculateEquation(current){
   });
   treeArr=calculateTree(treeArr,0);
   console.log("you made it back", treeArr[0]);
-  const num=parseInt(treeArr[0]);
+  const num=parseFloat(treeArr[0]);
   return num;
 }
 
@@ -108,8 +108,8 @@ function calculateTree(treeArr,index){
     treeArr=calculateTree(treeArr,2*index+1);
   }
 
-  const num1=parseInt(treeArr[2*index+1]);
-  const num2=parseInt(treeArr[2*index+2]);
+  var num1=parseFloat(treeArr[2*index+1]);
+  var num2=parseFloat(treeArr[2*index+2]);
 
   if(treeArr[index]==="*"){
     treeArr[index]=num1*num2;
