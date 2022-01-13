@@ -105,7 +105,7 @@ function calculateTree(treeArr,index){
   }
 
   if(isOperator(treeArr[2*index+2])===true){
-    treeArr=calculateTree(treeArr,2*index+1);
+    treeArr=calculateTree(treeArr,2*index+2);
   }
 
   var num1=parseFloat(treeArr[2*index+1]);
@@ -113,14 +113,16 @@ function calculateTree(treeArr,index){
 
   if(treeArr[index]==="*"){
     treeArr[index]=num1*num2;
+    console.log(num1, " * " , num2, " = ", treeArr[index]);
   }else if(treeArr[index]==="/"){
     treeArr[index]=num1/num2;
+    console.log(num1, " / " , num2, " = ", treeArr[index]);
   }else if(treeArr[index]==="+"){
-    console.log("right spot");
     treeArr[index]=num1+num2;
-    console.log("ans: ",treeArr[index]);
+    console.log(num1, " + " , num2, " = ", treeArr[index]);
   }else if(treeArr[index]==="-"){
     treeArr[index]=num1-num2;
+    console.log(num1, " - " , num2, " = ", treeArr[index]);
   }
   return treeArr;
 }
